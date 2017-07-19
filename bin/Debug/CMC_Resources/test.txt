@@ -1,0 +1,64 @@
+<html><head>
+        <title>
+    CryptoCurrency Market Capitalizations
+</title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <meta name="google-site-verification" content="EDc1reqlQ-zAgeRrrgAxRXNK-Zs9JgpE9a0wdaoSO9A">
+        <meta property="og:type" content="website">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="200">
+        <meta property="og:image:height" content="200">
+        
+    <meta property="og:image" content="http://coinmarketcap.com/static/img/CoinMarketCap.png">
+    <meta property="og:image:secure_url" content="https://coinmarketcap.com/static/img/CoinMarketCap.png">
+    <meta property="og:title" content="CryptoCurrency Market Capitalizations">
+    <meta name="description" content="CryptoCurrency market cap rankings, charts, and more">
+    <meta property="og:description" content="CryptoCurrency market cap rankings, charts, and more">        
+
+
+
+        
+        
+            <link href="https://coinmarketcap.com/static/compressed/base.min.css?c6e73569" rel='stylesheet' type='text/css'>
+        
+
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link rel="apple-touch-icon" href="https://coinmarketcap.com/static/img/CoinMarketCap.png">
+        
+
+        
+
+        <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+        <script>
+          var googletag = googletag || {};
+          googletag.cmd = googletag.cmd || [];
+        </script>
+        
+
+        <script type='text/javascript'>
+          googletag.cmd.push(function() {
+            
+                
+                    googletag.defineSlot('/48901027/landing_leaderboard_top', [728, 90], 'div-gpt-ad-1488495260324-1').addService(googletag.pubads());
+                    googletag.defineSlot('/48901027/leaderboard_side', [160, 600], 'div-gpt-ad-1488495260324-2').addService(googletag.pubads());
+                    googletag.defineSlot('/48901027/landing_leaderboard_bottom', [728, 90], 'div-gpt-ad-1488495260324-0').addService(googletag.pubads());
+                
+            
+
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+          });
+        </script>
+
+        
+
+        
+
+        
+
+
+        <link rel="stylesheet" href="https://coinmarketcap.com/static/sponsored/skincoin/styles.min.css">        
+
+    </head><body></body></html>
