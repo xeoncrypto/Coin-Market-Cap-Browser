@@ -1,0 +1,9 @@
+﻿<Application x:Class="CMC_Browser.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CMC_Browser"
+             StartupUri="CMC_XAML/LOAD.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
