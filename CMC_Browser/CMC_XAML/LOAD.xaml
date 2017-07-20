@@ -14,7 +14,7 @@
             </RadialGradientBrush>
         </Grid.Background>
         <Label Content="Loading..." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="106,130,0,0" Width="76" Foreground="White" Height="33" FontSize="16"/>
-        <Label Content="Version 0.1a" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="106,240,0,0" Width="69" Foreground="White" Height="31" FontSize="10"/>
+        <Label Content="Version 0.2a" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="106,240,0,0" Width="69" Foreground="White" Height="31" FontSize="10"/>
         <Label Content="CMC Monitor" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="66,42,0,0" Width="153" Foreground="White" Height="42" FontSize="24"/>
         <ProgressBar x:Name="prgLoading" HorizontalAlignment="Left" Height="10" Margin="32,115,0,0" VerticalAlignment="Top" Width="229" Value="10"/>
 

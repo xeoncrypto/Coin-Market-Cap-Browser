@@ -106,14 +106,6 @@
   <ItemGroup>
     <None Include="CMC_Config\App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="CMC_Resources\CMC.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Resource Include="CMC_Resources\test.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
