@@ -20,7 +20,7 @@ namespace CMC_Browser.CMC_XAML
 
             LoadSequence();
         }
-    private async void LoadSequence()
+        private async void LoadSequence()
         {
 
             await Task.Run(() => CMC_HTML.BuildCMCData(this));
@@ -28,7 +28,7 @@ namespace CMC_Browser.CMC_XAML
             MAIN = new MainWindow(CMC_HTML);
 
             //send html data to the frame
-            MAIN.frameCMC.Source = CMC_HTML.GetFileLocation();
+            MAIN.CMC_FRAME.NavigateToString(CMC_HTML.GetHTML());
             MAIN.Show();
 
             this.Hide();

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Collections.Generic;
 using CMC_Browser.CMC_XAML;
 using System.IO;
@@ -13,21 +14,14 @@ namespace CMC_Browser
         /// </summary>
         private const String CMC_URL = @"https://coinmarketcap.com/";
 
-        //change this to a memory stream
-        private readonly Uri CMC_TEMP_FILE = new Uri(Path.Combine(Directory.GetCurrentDirectory(), "CMC_Resources/CMC.html"));
+        /// <summary>
+        /// The compiled html file created by BuildCMCData()
+        /// </summary>
+        private String GENERATED_HTML;
 
         public CMC_Html()
         {
 
-        }
-
-        /// <summary>
-        /// Returns Uri of the location of the temporar CMC.html file
-        /// </summary>
-        /// <returns>Uri</returns>
-        public Uri GetFileLocation()
-        {
-            return CMC_TEMP_FILE;
         }
 
         /// <summary>
@@ -46,9 +40,9 @@ namespace CMC_Browser
         /// <summary>
         /// Writes the CMC collated pages to the temporary HTML file
         /// </summary>
-        private void WriteHTMLToFile(String webpage)
+        public String GetHTML()
         {
-            File.WriteAllText(CMC_TEMP_FILE.LocalPath, webpage);
+            return GENERATED_HTML;
         }
 
 
@@ -60,11 +54,9 @@ namespace CMC_Browser
             CMC_MASTER.DocumentNode.AppendChild(HTML_SKELETON);
             
             //set head of the skeleton equal to the website and fix local linking
-            HtmlNode cmcHead = new HtmlWeb().Load(CMC_URL).DocumentNode.SelectSingleNode("//head");
-            CMC_MASTER.DocumentNode.SelectSingleNode("//head").InnerHtml = FixLinks(cmcHead.InnerHtml);
+            CMC_MASTER.DocumentNode.SelectSingleNode("//head").InnerHtml = FixLinks(new HtmlWeb().Load(CMC_URL).DocumentNode.SelectSingleNode("//head").InnerHtml);
 
-            HtmlNode cmcBody = new HtmlWeb().Load(CMC_URL).DocumentNode.SelectSingleNode("//body");
-            CMC_MASTER.DocumentNode.SelectSingleNode("//body").InnerHtml = FixLinks(cmcBody.InnerHtml);
+            CMC_MASTER.DocumentNode.SelectSingleNode("//body").InnerHtml = FixLinks(new HtmlWeb().Load(CMC_URL).DocumentNode.SelectSingleNode("//body").InnerHtml);
 
             //remove unneeded data
             CMC_MASTER.DocumentNode.SelectSingleNode("//*[@id=\"nav-main\"]").Remove();
@@ -97,11 +89,8 @@ namespace CMC_Browser
             }
 
             //write master page to file
-            WriteHTMLToFile(CMC_MASTER.DocumentNode.OuterHtml);
-
-            GC.Collect();
+            GENERATED_HTML = CMC_MASTER.DocumentNode.OuterHtml;
         }
-
 
     }
 }
